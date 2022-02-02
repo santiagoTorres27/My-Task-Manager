@@ -8,37 +8,37 @@ const UserState = (props) => {
     const list = [
         {
             id: 't1',
-            title: 'Basic react',
-            description: 'Im learning React, this is my first project',
-            date: '2018-12-12',
-            category: 'home',
+            title: 'Learn react',
+            description: 'Watch youtube tutorials about React',
+            date: '2022-02-02',
+            category: 'school',
             completed: true
         }, {
             id: 't2',
-            title: 'My Task 2',
-            description: 'This is my first project',
-            date: '2019-12-12',
+            title: 'Complete JavaScript Project',
+            description: 'Complete JS project about events and upload it to the school website ',
+            date: '2022-02-10',
             category: 'school',
             completed: false
         }, {
             id: 't3',
-            title: 'Computing',
-            description: 'My 3 ya',
-            date: '2020-12-12',
+            title: 'Finish PHP Project',
+            description: 'Finish PHP Project and add styles with bootstrap',
+            date: '2022-01-18',
             category: 'school',
             completed: true
         }, {
             id: 't4',
-            title: 'I want to work',
-            description: 'My 3 ya',
-            date: '2021-12-12',
+            title: 'Appointment with the doctor',
+            description: 'Doctors appointment at 3 p.m.',
+            date: '2022-03-02',
             category: 'health',
             completed: false
         }, {
             id: 't5',
-            title: 'All i need is lobe',
-            description: 'My 3 ya',
-            date: '2022-12-12',
+            title: 'Go to the supermarket',
+            description: 'Buy bread, fish and salad',
+            date: '2022-02-04',
             category: 'shopping',
             completed: false
         }
