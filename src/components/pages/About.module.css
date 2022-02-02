@@ -1,0 +1,32 @@
+.about {
+    margin-top: 60px;
+}
+
+.about section {
+    margin: 40px 0px;
+    padding: 72px 15%;
+}
+
+.about section:nth-child(2) {
+    background-color: #111c27;
+    color: orange;
+}
+
+.about section:nth-child(2) img {
+    width: 400px;
+}
+
+.about .ab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 64px;
+    align-items: center;
+}
+
+.about .ab img {
+    width: 100%;
+}
+
+.about .ab h2 {
+    font-weight: 700;
+}

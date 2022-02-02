@@ -1,0 +1,52 @@
+.task-detail .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-detail .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.task-detail .item-category {
+    background-color: teal;
+    width: 200px;
+}
+
+.task-detail h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 32px;
+}
+
+.task-detail .desc {
+    margin-bottom: 24px;
+}
+
+.task-detail .date {
+    font-size: 1rem;
+}
+
+.task-detail .hr {
+    width: 100%;
+}
+
+.task-detail .info {
+    color: rgb(75, 75, 75);
+    padding: 8px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-right: 8px;
+    font-size: .9rem;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.task-detail .footer {
+    display: flex;
+    margin-top: 32px;
+}
+
+.task-detail .footer div {
+    display: flex;
+}

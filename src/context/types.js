@@ -1,0 +1,6 @@
+export const ADD_USER = 'ADD_USER'
+export const GET_CATEGORY_LIST = 'GET_CATEGORY_LIST'
+export const GET_ALL_ITEMS = 'GET_ALL_ITEMS'
+export const COMPLETE_TASK = 'COMPLETE_TASK'
+export const OPEN_MODAL = 'OPEN_MODAL'
+export const GET_TASK = 'GET_TASK'
