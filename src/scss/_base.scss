@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+:root {
+  --color-primary: #7fc9b8;
+  --color-primary-light: #ecf5f2;
+  --color-primary-hover: #74b8a8;
+  --color-bg: #f6f6f5;
+  --color-text: #797573;
+  --color-light-grey: #b8b2b2;
+
+  --color-category-school: #277da1;
+  --color-category-school-1: #277da118;
+
+  --color-category-home: #f9844a;
+  --color-category-home-1: #f9844a18;
+
+  --color-category-health: #4d908e;
+  --color-category-health-1: #4d908e18;
+
+  --color-category-shopping: #7c65b1;
+  --color-category-shopping-1: #7c65b118;
+
+  --color-category-2: #f9c74f;
+  --color-category-3: #577590;
+  --color-category-6: #f94144;
+
+  --color-dark-1: #272d35;
+  --color-dark-2: #1f252d;
+  --color-dark-3: rgb(31, 33, 36);
+
+  // - Filter colors
+
+  // White
+  --color-white-filter: invert(100%) sepia(0%) saturate(7497%)
+    hue-rotate(183deg) brightness(106%) contrast(97%);
+
+  --color-primary-filter: invert(80%) sepia(10%) saturate(1146%)
+    hue-rotate(116deg) brightness(93%) contrast(86%);
+
+  --color-black-filter: invert(0%) sepia(96%) saturate(27%) hue-rotate(264deg)
+    brightness(101%) contrast(102%);
+
+  --color-category-school-filter: invert(39%) sepia(65%) saturate(555%)
+    hue-rotate(152deg) brightness(94%) contrast(84%);
+
+  --color-category-home-filter: invert(68%) sepia(25%) saturate(4123%)
+    hue-rotate(328deg) brightness(101%) contrast(95%);
+
+  --color-category-health-filter: invert(49%) sepia(53%) saturate(296%)
+    hue-rotate(129deg) brightness(93%) contrast(95%);
+
+  --color-category-shopping-filter: invert(45%) sepia(14%) saturate(1650%)
+    hue-rotate(217deg) brightness(92%) contrast(86%);
+
+  --color-text-filter: invert(47%) sepia(7%) saturate(199%) hue-rotate(335deg)
+    brightness(95%) contrast(86%);
+
+  --color-light-grey-filter: invert(80%) sepia(4%) saturate(212%)
+    hue-rotate(346deg) brightness(91%) contrast(89%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Cairo", sans-serif;
+
+  @media screen and (max-width: 800px) {
+    font-size: 0.8rem;
+  }
+}
+
+// - BUTTONS
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.5rem 2rem;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 2rem;
+    margin-right: 1rem;
+  }
+
+  &--dark-text {
+    color: black;
+  }
+
+  &:disabled {
+    background-color: var(--color-text);
+
+    &:hover {
+      background-color: #6b6866;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  &--outlined {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &--circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 1.5rem;
+      filter: var(--color-white-filter);
+    }
+  }
+}
+
+.btn-secondary {
+  font-family: inherit;
+  padding: 0.5rem 1.4rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s;
+
+  img {
+    width: 1rem;
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(85deg)
+      brightness(109%) contrast(101%);
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 360px) {
+    img {
+      margin-right: 0rem;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  &--edit {
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    background-color: transparent;
+
+    img {
+      filter: var(--color-text-filter);
+    }
+
+    &:hover {
+      background-color: rgb(233, 232, 232);
+    }
+
+    &--dark {
+      border: 1px solid var(--color-light-grey);
+      color: var(--color-light-grey);
+
+      img {
+        filter: var(--color-light-grey-filter);
+      }
+
+      &:hover {
+        background-color: var(--color-dark-1);
+      }
+    }
+  }
+
+  &--delete {
+    background-color: #ff8485;
+    color: white;
+
+    &:hover {
+      background-color: #e46969;
+    }
+  }
+}
+
+// - Slider
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+.input {
+  &:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  &--school:checked + .slider {
+    background-color: var(--color-category-school);
+  }
+
+  &--home:checked + .slider {
+    background-color: var(--color-category-home);
+  }
+
+  &--health:checked + .slider {
+    background-color: var(--color-category-health);
+  }
+
+  &--shopping:checked + .slider {
+    background-color: var(--color-category-shopping);
+  }
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

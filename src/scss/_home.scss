@@ -1,0 +1,19 @@
+.home {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+
+  // - Container
+  &__container {
+    padding: 1rem 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  // - Dark theme
+  &--dark {
+    background-color: var(--color-dark-2);
+  }
+}

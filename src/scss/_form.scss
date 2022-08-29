@@ -1,0 +1,64 @@
+.form {
+  &__title {
+    &--dark {
+      color: white;
+    }
+  }
+
+  &__input {
+    margin-bottom: 0.5rem;
+
+    input,
+    select {
+      width: 100%;
+      padding: 1rem;
+
+      font-family: inherit;
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid var(--color-primary);
+      outline: none;
+      transition: all 0.3s;
+      background-color: transparent;
+
+      &::placeholder {
+        letter-spacing: 0.1rem;
+      }
+
+      &:focus {
+        background-color: var(--color-primary-light);
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+    }
+
+    // - Dark theme
+    &--dark {
+      input,
+      select {
+        background-color: transparent;
+        color: white;
+        &::-webkit-calendar-picker-indicator {
+          filter: invert(1);
+        }
+
+        &::placeholder {
+          color: rgba(253, 253, 253, 0.562);
+        }
+
+        &:focus {
+          background-color: var(--color-dark-1);
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  &__error-msg {
+    color: rgb(223, 139, 139);
+  }
+}
